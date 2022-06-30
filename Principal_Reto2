@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.holamundo;
+
+/**
+ *
+ * @author Compumag
+ */
+public class ClasePrincipalReto2 {
+    public static void main(String[] args) {
+        String[] cancionesEscogidas = new String[]{
+            "Mil horas",
+            "Por ese hombre",
+            "El sereno",
+            "A esa mujer",
+            "Sublime mujer",
+            "Vine a conquistarte",
+            "Si me dejas ahora",
+            "Como un pintor",
+            "Sin medir distancia",
+            "Mi hermano y yo",
+            "Mami",
+            "Solo a ti pertenezco",
+            "Quiereme",
+            "Sencillamente",
+            "Enciendeme",
+            "Cuando me enamoro",
+            "Tu eres mi tesoro"
+        };
+        ReproductorMusica reproductor = new ReproductorMusica(cancionesEscogidas);
+        
+        reproductor.devolverCancion();
+        reproductor.devolverCancion();
+        
+        reproductor.agregarCancionesFavoritas();
+        reproductor.proximaCancion();
+    }
+    
+}
