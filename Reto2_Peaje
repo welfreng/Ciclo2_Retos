@@ -1,0 +1,101 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.holamundo;
+
+/**
+ *
+ * @author Compumag
+ */
+public class Peaje {
+    private String[] filaCoche;
+    private String[] cochesFlyPass;
+    private boolean estadoPeaje;
+    private int cantidadCochesAtendidos;
+    private int cocheEnAtencion;
+    
+    public Peaje(String[] filaCoche){
+        this.filaCoche = filaCoche;
+        this.cochesFlyPass = new String[filaCoche.length];
+        this.estadoPeaje = true;
+        this.cocheEnAtencion = 0;
+        this.cantidadCochesAtendidos = 1;
+        for (int i =0; i < filaCoche.length; i++){
+            this.cochesFlyPass[i] = " ";
+        }
+        
+    }
+    
+    public void proximoCoche(){
+        if (this.estadoPeaje == true){
+            this.cocheEnAtencion += 1;
+            this.cantidadCochesAtendidos += 1;
+            
+                    
+        }
+        
+    }
+    
+    public void agregarCocheFlyPass(){
+        String cocheABuscar = filaCoches[cocheEnAtencion];
+        for (String coche: cochesFlyPass){
+            if (coche.equals(cocheABuscar)){
+                break;
+            }
+            if (" ".equals(coche)){
+                coche = cocheABuscar;
+            }
+        }
+    }
+    
+    public void cambiarEstadoPeaje(){
+        if (this.estadoPeaje ==true){
+            this.estadoPeaje = false;
+        }else {
+            this.estadoPeaje = true;
+        }
+    }
+
+    public String[] getFilaCoche() {
+        return filaCoche;
+    }
+
+    public void setFilaCoche(String[] filaCoche) {
+        this.filaCoche = filaCoche;
+    }
+
+    public String[] getCochesFlyPass() {
+        return cochesFlyPass;
+    }
+
+    public void setCochesFlyPass(String[] cochesFlyPass) {
+        this.cochesFlyPass = cochesFlyPass;
+    }
+
+    public boolean isEstadoPeaje() {
+        return estadoPeaje;
+    }
+
+    public void setEstadoPeaje(boolean estadoPeaje) {
+        this.estadoPeaje = estadoPeaje;
+    }
+
+    public int getCantidadCochesAtendidos() {
+        return cantidadCochesAtendidos;
+    }
+
+    public void setCantidadCochesAtendidos(int cantidadCochesAtendidos) {
+        this.cantidadCochesAtendidos = cantidadCochesAtendidos;
+    }
+
+    public int getCocheEnAtencion() {
+        return cocheEnAtencion;
+    }
+
+    public void setCocheEnAtencion(int cocheEnAtencion) {
+        this.cocheEnAtencion = cocheEnAtencion;
+    }
+    
+    
+}
