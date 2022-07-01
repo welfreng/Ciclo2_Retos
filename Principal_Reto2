@@ -8,8 +8,12 @@ package com.mycompany.holamundo;
  *
  * @author Compumag
  */
+ 
+
 public class ClasePrincipalReto2 {
     public static void main(String[] args) {
+    
+        //reproductor
         String[] cancionesEscogidas = new String[]{
             "Mil horas",
             "Por ese hombre",
@@ -36,6 +40,16 @@ public class ClasePrincipalReto2 {
         
         reproductor.agregarCancionesFavoritas();
         reproductor.proximaCancion();
+        
+        
+        //EPS
+        String[] cola = {"A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11"};
+        TurnoVirtual turnoVirtual1 = new TurnoVirtual(cola);
+        
+        turnoVirtual1.atenderProximoTurno();
+        turnoVirtual1.atenderProximoTurno();
+        turnoVirtual1.atenderProximoTurno();
+        turnoVirtual1.atenderProximoTurno();
     }
     
 }
