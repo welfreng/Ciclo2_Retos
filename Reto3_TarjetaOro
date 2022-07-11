@@ -1,0 +1,55 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.cinecuartapared;
+
+/**
+ *
+ * @author Compumag
+ */
+public class TarjetaOro extends TarjetaCine {
+    //Atributos
+    
+    
+    String beneficiosDescripcion [] =  {"Boleto Gratis","Crispetas Gratis","Gaseosa Gratis"};
+    boolean beneficiosEstado [] = {true, true, true};
+
+    //Constructor
+    
+    public TarjetaOro (String idTarjeta, String nombreCompleto, String email, String telefono, int edad) {
+        super(idTarjeta, nombreCompleto, email, telefono, edad, 20);
+        
+        
+        
+    }
+
+    //Método
+    
+    public boolean redimirBeneficio(int posicionBeneficio){
+        if (this.beneficiosEstado[posicionBeneficio] == true){
+            this.beneficiosEstado[posicionBeneficio] = false;
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    //Getters y Setters
+    public String[] getBeneficiosDescripcion() {
+        return beneficiosDescripcion;
+    }
+
+    public void setBeneficiosDescripcion(String[] beneficiosDescripcion) {
+        this.beneficiosDescripcion = beneficiosDescripcion;
+    }
+
+    public boolean[] isBeneficiosEstado() {
+        return beneficiosEstado;
+    }
+
+    
+    public void setBeneficiosEstado(boolean[] beneficiosEstado) {
+        this.beneficiosEstado = beneficiosEstado;
+    }
+}
