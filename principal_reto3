@@ -1,0 +1,53 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.cinecuartapared;
+import java.util.Arrays;
+/**
+ *
+ * @author Compumag
+ */
+public class Reto3Cine {
+    public static void main(String[] args) {
+        String boleta = "Boleta";
+        String combo1 = "Combo 1 - Crispetas + Gaseosa";
+        String combo2 = "Combo 2 - Perro + Gaseosa";
+        
+        String compra[] = new String[2];
+        
+        compra[0] = boleta;
+        compra[1] = combo1;
+        TarjetaPlata tr1 = new TarjetaPlata("10258", "Juan Cañar", "juan@gmail.com", "320159753", 25);
+        
+        tr1.pagar(compra);
+        tr1.pagar(compra);
+        tr1.pagar(compra);
+        tr1.pagar(compra);
+        
+        
+        int visitas = tr1.getCantidadVisitas();
+        System.out.println("visitas = " + visitas);
+        double dato = tr1.pagar(compra);
+        visitas = tr1.getCantidadVisitas();
+        System.out.println("visitas = " + visitas);
+        System.out.println("Pagará: "+dato);
+        System.out.println(tr1.isElegibleOro());
+        System.out.println(tr1.getPorcentajeDescuento());
+         
+        TarjetaOro tr2 = new TarjetaOro("520", "Pedro Rivera ", "pedro@gmail.com", "320489632", 30);
+
+        double pagar = tr2.pagar(compra);
+        System.out.println("pagar = " + pagar);
+        System.out.println("¿Puede John redimir la boleta gratis?:");
+        System.out.println(tr2.redimirBeneficio(0));
+        System.out.println(tr2.redimirBeneficio(0));
+        
+        System.out.println(tr2.getPorcentajeDescuento());
+        System.out.println("Beneficios:");
+        System.out.println(Arrays.toString(tr2.getBeneficiosDescripcion()));
+        System.out.println("Estado de los beneficios:");
+        //System.out.println(Arrays.toString(tr2.getBeneficiosEstado()));
+    }
+    
+}
